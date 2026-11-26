@@ -27,8 +27,6 @@ BMKG nowcast (RSS + CAP, every 2 min) ──► nowcast_alert ──┘         
 3. The polygons of each nowcast alert are merged with `ST_Union`, and PostGIS computes their distance to active routes and to home.
 4. Every match within 10 km is logged in `nowcast_match`. Only matches within 2 km are sent; the rest are kept to tune the buffer later.
 
-![ERD v1](erd-v1.png)
-
 ## Tech stack
 
 - PostgreSQL 17 with PostGIS 3
